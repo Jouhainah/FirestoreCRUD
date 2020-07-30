@@ -1,13 +1,18 @@
 <h1 class="display-4">Employee Register</h1>
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+  <input
+    type="hidden"
+    name="id"
+    #fullName="ngModel"
+    [(ngModel)]="service.formData.id"
+  />
   <div class="form-group">
     <input
       name="fullName"
       #fullName="ngModel"
-      ([ngModel])="(service.formData.fullName)"
+      [(ngModel)]="service.formData.fullName"
       class="form-control"
       placeholder="Full name"
-      ngModel
       required
     />
     <div *ngIf="fullName.invalid && fullName.touched" class="validation-error">
@@ -18,10 +23,9 @@
     <input
       name="position"
       #position="ngModel"
-      ([ngModel])="(service.formData.position)"
+      [(ngModel)]="service.formData.position"
       class="form-control"
       placeholder="Position"
-      ngModel
     />
   </div>
   <div class="form-row">
@@ -29,20 +33,18 @@
       <input
         name="code"
         #code="ngModel"
-        ([ngModel])="(service.formData.code)"
+        [(ngModel)]="service.formData.code"
         class="form-control"
         placeholder="Code"
-        ngModel
       />
     </div>
     <div class="form-group col-md-6">
       <input
         name="mobile"
         #mobile="ngModel"
-        ([ngModel])="(service.formData.mobile)"
+        [(ngModel)]="service.formData.mobile"
         class="form-control"
         placeholder="Mobile"
-        ngModel
       />
     </div>
   </div>
