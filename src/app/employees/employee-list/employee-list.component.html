@@ -1,1 +1,18 @@
-<p>employee-list works!</p>
+<table class="table table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Mobile</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of list">
+      <td>{{ emp.code }} - {{ emp.fullName }}</td>
+      <td>{{ emp.position }}</td>
+      <td>{{ emp.mobile }}</td>
+      <td>
+        <a class="btn text-danger"><i class="fa fa-trash"></i></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
