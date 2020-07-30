@@ -6,10 +6,10 @@
     <th></th>
   </thead>
   <tbody>
-    <tr *ngFor="let emp of list">
-      <td>{{ emp.code }} - {{ emp.fullName }}</td>
-      <td>{{ emp.position }}</td>
-      <td>{{ emp.mobile }}</td>
+    <tr *ngFor="let employee of list">
+      <td (click)="onEdit(employee)">{{ employee.code }} - {{ employee.fullName }}</td>
+      <td (click)="onEdit(employee)">{{ employee.position }}</td>
+      <td (click)="onEdit(employee)">{{ employee.mobile }}</td>
       <td>
         <a class="btn text-danger"><i class="fa fa-trash"></i></a>
       </td>
