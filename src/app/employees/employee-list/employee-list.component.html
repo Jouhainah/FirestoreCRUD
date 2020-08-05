@@ -7,11 +7,13 @@
   </thead>
   <tbody>
     <tr *ngFor="let employee of list">
-      <td (click)="onEdit(employee)">{{ employee.code }} - {{ employee.fullName }}</td>
+      <td (click)="onEdit(employee)">
+        {{ employee.code }} - {{ employee.fullName }}
+      </td>
       <td (click)="onEdit(employee)">{{ employee.position }}</td>
       <td (click)="onEdit(employee)">{{ employee.mobile }}</td>
       <td>
-        <a class="btn text-danger"><i class="fa fa-trash"></i></a>
+        <a class="btn text-danger" (click)="onDelete(employee.id)" ><i class="fa fa-trash"></i></a>
       </td>
     </tr>
   </tbody>
